@@ -1,0 +1,25 @@
+.heading {
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  word-break: break-all;
+}
+
+.span {
+  color:#000000;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.sizing {
+  height: auto;
+  
+}
+
+.btn{
+  background: #191A19;
+  opacity: 0.9;
+  color:  white;
+  font-weight: 600;
+  color:#E1FF26;
+}
