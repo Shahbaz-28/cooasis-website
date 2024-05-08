@@ -81,7 +81,7 @@ function PreviousWork() {
 
   return (
     <>
-      <div className="container mx-auto mt-10">
+      <div className="container-fluid mt-10">
         <div className="mb-14 lg:mb-20" data-aos="zoom-in">
           <h2 className={`text-5xl md:6xl lg:text-[93px] pt-10 ${styles.heading}`}>A glimpse of
             <br />
@@ -90,7 +90,7 @@ function PreviousWork() {
         <div className='mb-6'>
           <Slider {...settings}>
             {images?.map((image, index) => (
-              <div className='px-3'>
+              <div className='px-3' key={index}>
                 <img src={image} alt="" />
               </div>
             ))}
@@ -99,7 +99,7 @@ function PreviousWork() {
 
         <Slider {...settings2}>
           {images?.map((image, index) => (
-            <div className='px-3'>
+            <div className='px-3' key={index}>
               <img src={image} alt="" />
             </div>
           ))}
