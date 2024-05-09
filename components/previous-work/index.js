@@ -97,7 +97,7 @@ function PreviousWork() {
           </Slider>
         </div>
 
-        <Slider {...settings2}>
+        <Slider {...settings2} >
           {images?.map((image, index) => (
             <div className='px-3'>
               <img src={image} alt="" />
