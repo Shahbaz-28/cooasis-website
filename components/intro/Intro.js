@@ -15,7 +15,7 @@ const Intro = () => {
         <div className="px-4 mt-8 sm:w-full sm:max-w-md lg:max-w-none lg:mx-0">
           <div className="w-full sm:h-[270px] gap-10 leading-[65px]">
             <p className="font-light text-sm ml-3 text-[20px]">Introducing</p>
-            <h1 className={`text-[40px] sm:text-[75px] md:text-5xl md: mt-4 font-bold tracking-tight md:leading-[70px] lg:leading-[80px] ${styles.break}`}>
+            <h1 className="text-[40px] sm:text-[75px] md:text-5xl md: mt-4 font-bold tracking-tight md:leading-[70px] lg:leading-[80px]">
               All new
               <br />
               Ai-Powered
