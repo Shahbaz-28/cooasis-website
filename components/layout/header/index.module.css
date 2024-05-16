@@ -37,6 +37,21 @@
   top: 16px;
 }
 
+@media (min-width:991px) and (max-width:1200px) {
+ 
+  .navbar-nav li a {
+    font-size: 15px !important;
+    padding-right: 13px !important;
+    padding-left: 13px !important;
+  }
+
+  .navbar-nav li button {
+    font-size: 16px;
+    width: 140px;
+  }
+
+}
+
 @media (max-width: 991px) {
   .header .navbar {
     display: grid;
@@ -51,6 +66,17 @@
     flex-grow: 1;
     align-items: center;
  }
+
+ .affix {
+  background: none !important;
+}
+
+.affix > div {
+  border-radius: 56px;
+  background: none !important;
+  backdrop-filter: blur(31px);
+  -webkit-backdrop-filter: blur(31px);
+}
 }
 @media (max-width: 991px) {
   .header .navbar .navbar-collapse {

@@ -13,28 +13,45 @@ const CreaPartner = () => {
     infinite: true,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: '180px',
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          centerPadding: '220px',
+        }
+      },
+      {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
+          centerPadding: '140px',
         }
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
+          centerPadding: '100px',
         }
       },
       {
-        breakpoint: 575,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
+          centerPadding: "90px",
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "40px",
         }
       },
     ]
@@ -51,7 +68,7 @@ const CreaPartner = () => {
   return (
     <>
       <div
-        className={`bg-custom-yellow container mx-auto rounded-[65px] w-[85%] mt-20 ${styles.custom}`}
+        className={`bg-custom-yellow container mx-auto rounded-[65px] mt-20 ${styles.custom}`}
       >
         <div className="text-center w-full max-w-[600px] flex justify-center mx-auto p-6">
           {/* <h1 className="text-4xl mt-20 font-bold leading-none text-center">
@@ -63,9 +80,6 @@ const CreaPartner = () => {
   </h1> */}
           <Image
             className="mt-20 max-w-full h-auto"
-            data-aos="zoom-in-down"
-            data-aos-duration="1500"
-            data-aos-offset="200"
             src={creativeImg}
             alt="Description of the image"
           />
@@ -75,8 +89,7 @@ const CreaPartner = () => {
 
         <div
           className="main flex flex-wrap justify-center gap-8 p-8"
-          data-aos="zoom-out-down"
-          data-aos-duration="1000"
+          data-aos="zoom-in-down"
         >
           <div className="opacity-70">
             <div className="card bg-base-100 shadow-xl">
@@ -136,7 +149,7 @@ const CreaPartner = () => {
           <div className="mb-6">
             <Slider {...settings}>
               {images?.map((image, index) => (
-                <div className='px-3'>
+                <div className='px-3' key={index}>
                   <img src={image} alt="" />
                 </div>
               ))}

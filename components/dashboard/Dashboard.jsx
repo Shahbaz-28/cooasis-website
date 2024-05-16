@@ -2,98 +2,65 @@ import React from "react";
 import Image from "next/image";
 import dashboardImg from "../../public/dashboard.png";
 import styles from "./dashboard.module.css";
-import caseStudyImg from "../../public/caseStudy-1.png";
-import caseStudyImg2 from "../../public/caseStudy-2.png";
 
 const Dashboard = () => {
   return (
     <>
-      <div
-        className={`container mx-auto rounded-[65px]  grid grid-cols-1 w-[]  mt-20 md:grid-cols-2 items-center p-8 ${styles.custom} relative`}
-      >
-        <div className="righ px-4 lg:px-6 text-center md:text-left" data-aos="zoom-in-right" 
-            data-aos-offset="200">
-          <div className="text-4xl md:text-6xl font-bold  ">
-            <h1>Completely</h1>
-            <h1>customizable</h1>
-            <h1>dashboard</h1>
+      <div className={`container mx-auto px-4 rounded-[65px]  lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-20 ${styles.custom}`}>
+
+        {/* Left Section */}
+        <div className="text-center md:text-left" data-aos="zoom-in-right" data-aos-offset="200">
+          <div className="text-4xl md:text-6xl mt-10 lg:mt-5 font-bold mb-8">
+            <h1 className="text-center lg:text-left">Completely
+              <br />
+              customizable
+              <br />
+              dashboard</h1>
           </div>
-          <div className="text-lg tracking-tighter mt-4">
-            <p>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint.
-            </p>
-            <p>Velit officia consequat duis enim velit mollit.</p>
+          <div className="text-lg tracking-tighter mb-8">
+            <p className="text-center lg:text-left">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+              <br />
+              Velit officia consequat duis enim velit mollit.</p>
           </div>
-          {/* Button */}
-          <div className="w-full md:w-[196.56px] h-[83px] mt-14 flex justify-center">
-            <button
-              className={`w-[196px] md:w-[200px] h-[70px] rounded-full font-semibold text-black text-lg ${styles.btn}`}
-            >
+          <div className="mt-8 text-center lg:text-left">
+            <button className={`w-[200px] h-[70px] rounded-full font-semibold text-black text-lg ${styles.btn}`}>
               Browse all services
             </button>
           </div>
         </div>
-        <div className="p-4" data-aos="zoom-in-left">
-          <Image
-            src={dashboardImg}
-            alt="Description of the image"
-            className="h-[450px]"
-          />
+
+        {/* Right Section */}
+        <div className="p-4">
+          <Image src={dashboardImg} alt="Description of the image" className="w-full" />
         </div>
       </div>
 
       {/* Section 2 */}
-
-      <div className="container mx-auto grid md:grid-cols-2 w-[90% p-4 gap-8 mt-4 justify-center items-center">
+      <div className="container px-4 lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8 lg:mt-12">
         {/* Part 1 */}
-        <div
-          className={`flex justify-center   items-center p-5 rounded-[45px] ${styles.containerbg}`} data-aos="fade-right"
-        >
-          <div className=" p-4 bg">
-            <h1 className="text-[21px] font-semibold leading-5">
-              Accelerate creative <br /> speed
-            </h1>
-            <p className="text-[12px] mt-8">
-              Ultra turnaround times and unlimited scale
-            </p>
-            <div className="w-full md:w-[180.56px] h-[50px] mt-4 flex justify-center  p-2">
-              <button className="w-[160px] md:w-[180px] h-[60px] rounded-full font-semibold text-black text-[18] bg-white">
-                Read case study
-              </button>
-            </div>
+        <div className={`pl-8 py-8 pr-0 rounded-3xl sm:flex items-center ${styles.left_side}`}>
+          <div className="content">
+            <h3 className="text-[32px] font-semibold leading-[25.92px]">Accelerate creative speed</h3>
+            <p className="mt-6 text-[12px] font-light leading-[13.62px]">Ultra turnaround times and unlimited scale</p>
+            <button className={`mt-6 py-5 px-5 text-[20px] font-semibold rounded-full ${styles.button}`}>Read case study</button>
           </div>
-          <div className="w-full md:w-auto relative md:ml-10 mt-10 md:mt-0 flex justify-center md:justify-end ">
-            <Image src={caseStudyImg} alt="Description of the image" />
+          <div className="image flex justify-center mt-4 sm:mt-0">
+            <img src="images/caseStudy-1.png" alt="" />
           </div>
         </div>
 
         {/* Part 2 */}
-         
-        <div
-          className={`flex justify-center items-center p-5 rounded-[45px] ${styles.containerbg}`} data-aos="fade-left"
-        >
-          <div className=" p-4 bg">
-            <h1 className="text-[21px] font-semibold leading-5">
-            Increased creative
-              <br />
-              performance
-            </h1>
-            <p className="text-[12px] mt-8">
-              Digital ads and brand assets that performs better (47%
-              increase in trail rate backed by data)
-            </p>
-            <div className="w-full md:w-[180.56px] h-[50px] mt-4 flex justify-center  p-2">
-              <button className="w-[160px] md:w-[180px] h-[60px] rounded-full font-semibold text-black text-[18] bg-white">
-                Read case study
-              </button>
-            </div>
+        <div className={`pl-8 py-8 pr-0 rounded-3xl sm:flex items-center ${styles.left_side}`}>
+          <div className="content">
+            <h3 className="text-[32px] font-semibold leading-[25.92px]">Increased creative performance</h3>
+            <p className="mt-6 text-[12px] font-light leading-[13.62px]">Digital ads and brand assets that performs better (47% increase in trail rate backed by data)</p>
+            <button className={`mt-6 py-5 px-5 text-[20px] font-semibold rounded-full ${styles.button}`}>Read case study</button>
           </div>
-          <div className="w-full md:w-auto relative md:ml-10 mt-10 md:mt-0 flex justify-center md:justify-end p-10">
-            <Image src={caseStudyImg2} alt="Description of the image" />
+          <div className="image flex justify-center mt-4 sm:mt-0">
+            <img src="images/caseStudy-2.png" alt="" />
           </div>
         </div>
-        
+
       </div>
     </>
   );
